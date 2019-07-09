@@ -1,0 +1,47 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #333;
+    background-image: radial-gradient(#555, #333);
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    grid-auto-rows: max-content;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px #0006;
+    width: 150px;
+    transform: rotateY(180deg);
+    transition: transform .2s linear;
+}
+
+.flipped img {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    backface-visibility: hidden;
+    opacity: 0;
+    transition: opacity 10ms .1s linear;
+}
+
+.flipped {
+    transform: rotateY(0);
+}
